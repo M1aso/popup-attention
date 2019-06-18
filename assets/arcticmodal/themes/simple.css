@@ -8,5 +8,41 @@
 	box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
 	border-radius: 6px;
 }
-.box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 11px; line-height: 15px; color: #999; cursor: pointer; }
-.box-modal_close:hover { color: #666; }
+.box-modal_left {
+  width: 80%;
+  float: left;
+}
+.box-modal_right {
+  width: 20%;
+  float: right;
+}
+.box-modal_right img {
+  width: 100%;
+}
+.box-modal_title {
+  font-weight: 600;
+  line-height: 27px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.box-modal_text {
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.33;
+  text-align: left;
+  color: #13151a;
+}
+.box-modal_close { 
+  background-color: #f5548f;
+  color: white;
+  font-family: "MyriadProCond", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.box-modal_close:hover { color: #000; }
