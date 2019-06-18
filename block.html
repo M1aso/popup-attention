@@ -1,0 +1,36 @@
+<!-- cookie -->
+<script src="//yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+
+<!-- arcticModal -->
+<script src="assets/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+<link rel="stylesheet" href="assets/arcticmodal/jquery.arcticmodal-0.3.css">
+
+<!-- arcticModal theme -->
+<link rel="stylesheet" href="assets/arcticmodal/themes/simple.css">
+<div style="display: none;">
+  <div class="box-modal" id="boxUserFirstInfo">
+    <div class="box-modal_left">
+      <div class="box-modal_title">Для доступа на сайт необходимо подтвердить возраст</div>
+      <div class="box-modal_text">Сайт содержит информацию, не рекомендованную для лиц, не достигших совершеннолетнего возраста. Сведения, размещенные на сайте, носят исключительно информационный характер и предназначены только для личного использования.</div>
+    </div>
+    <div class="box-modal_right">
+      <img src="/assets/img/18-est2.jpg" />
+    </div>
+    <div class="box-modal_buttons">
+      <a id="attention" class="box-modal_close arcticmodal-close">Я совершеннолетний</a>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(window).load(function() {
+    if ($.cookie('attention') != '18') {
+      $('#boxUserFirstInfo').arcticmodal({
+        closeOnOverlayClick: false,
+        closeOnEsc: true
+      });
+      $('#attention').click(function() {
+        $.cookie('attention', '18', {path: '/', expires: 7});
+      });
+    }
+  });
+</script>
